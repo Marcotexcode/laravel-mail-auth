@@ -13,7 +13,13 @@
                 <div class="card-body">
        
                     <h5 class="card-title" v-if="post.category">{{post.category.name}}</h5>
-        
+
+                    <div>
+
+                        <img class="img-fluid" :src=" post.cover " :alt=" post.title ">
+
+                    </div>
+
                     <p class="card-text">{{post.content}}</p>
 
                     <div v-if="post.tags">

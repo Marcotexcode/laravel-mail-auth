@@ -2451,6 +2451,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Post',
   data: function data() {
@@ -2492,6 +2498,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -38484,6 +38496,15 @@ var render = function() {
                     _vm._v(_vm._s(post.title))
                   ]),
                   _vm._v(" "),
+                  post.cover
+                    ? _c("div", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: { src: post.cover, alt: post.title }
+                        })
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
                   _c("p", { staticClass: "card-text" }, [
                     _vm._v(_vm._s(post.content))
                   ]),
@@ -38604,6 +38625,13 @@ var render = function() {
                   _vm._v(_vm._s(_vm.post.category.name))
                 ])
               : _vm._e(),
+            _vm._v(" "),
+            _c("div", [
+              _c("img", {
+                staticClass: "img-fluid",
+                attrs: { src: _vm.post.cover, alt: _vm.post.title }
+              })
+            ]),
             _vm._v(" "),
             _c("p", { staticClass: "card-text" }, [
               _vm._v(_vm._s(_vm.post.content))

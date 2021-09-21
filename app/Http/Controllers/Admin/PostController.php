@@ -201,6 +201,8 @@ class PostController extends Controller
 
             $cover_path =  Storage::put('covers', $data['image']);
 
+            Storage::delete($post->cover);
+            
             $data['cover'] = $cover_path;
 
         }
@@ -225,6 +227,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+
+        Storage::delete($post->cover);
 
         $post->delete();
 
