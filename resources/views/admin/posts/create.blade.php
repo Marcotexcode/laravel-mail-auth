@@ -60,7 +60,7 @@
 
                 <label for="img" class="form-label">Immagine</label>
 
-                <input type="file" name="image" class="form-control-file @error('image') is-invalid @enderror">
+                <input id="img" type="file" name="image" class="form-control-file @error('image') is-invalid @enderror">
                 
                 @error('image')
                 

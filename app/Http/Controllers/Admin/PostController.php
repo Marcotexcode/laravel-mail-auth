@@ -164,7 +164,8 @@ class PostController extends Controller
 
             'title' => 'required|max:60',
             'content' => 'required',
-            'category_id' => 'nullable|exists:categories,id'
+            'category_id' => 'nullable|exists:categories,id',
+            'image' => 'nullable|image'
             
         ]);
 
@@ -193,6 +194,14 @@ class PostController extends Controller
             }
             
             $data['slug'] = $slug;
+
+        }
+
+        if(array_key_exists('image', $data)) {
+
+            $cover_path =  Storage::put('covers', $data['image']);
+
+            $data['cover'] = $cover_path;
 
         }
         
