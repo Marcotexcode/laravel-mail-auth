@@ -31,7 +31,14 @@
                     @endif
                 
                 </h3>
-           
+
+                @if ($post->cover)
+                
+                    <img src=" {{asset('storage/' . $post->cover)}} " alt=" ">
+
+                @endif
+
+
                 <p class="card-text"> {{$post->content}} </p>
                       
             </div>
